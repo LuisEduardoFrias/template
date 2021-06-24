@@ -37,7 +37,7 @@ export default function StructureComponent(  )
         margin: '1px 0px 0px 0px',
         width: '200px',
         height: '100%',
-        backgroundColor: 'rgb(248, 249, 250)',
+        backgroundColor: '#F5F5F5',
         borderRight: '1px solid rgb(222, 226, 230)',
         boxSizing: 'border-box',
 
