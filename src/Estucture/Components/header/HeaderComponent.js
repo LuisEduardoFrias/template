@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef  } from 'react'
 import logo from '../../../assests/img/logo.png'
 import { Menubar } from 'primereact/menubar';
 import { Button } from 'primereact/button';
@@ -18,18 +18,19 @@ export default function HeaderComponent()
          }
      ];
      
-    const UserStyle ={
+    const UserStyle = {
         display: 'flex',
         flexDirecction: 'row',
-        alignItems: 'center',
+        alignItems: 'center'
 
     }
 
-    const start = <img src={logo} height="40" className="p-mr-2"></img >;
-    const end = <div style={UserStyle}> <Button icon="pi pi-user" className="p-button-rounded p-button-info" onClick={(e) => cm.current.show(e)} /> <label style={{marginLeft: '5px', color:'white'}}>Luis Eduardo frias</label></div>
+    const start = <img src={logo} alt='Logo' height="40" className="p-mr-2"></img >;
+    const end = <div style={UserStyle} onClick={(e) => cm.current.show(e)}> <Button icon="pi pi-user" className="p-button-rounded p-button-info" onClick={(e) => cm.current.show(e)} /> <label style={{marginLeft: '5px', color:'white', cursor:'pointer'}}>Luis Eduardo frias</label></div>
+
     return ( 
         <>
-        <ContextMenu model={items} ref={cm}></ContextMenu>
+        <ContextMenu model={items} ref={cm} ></ContextMenu>
         
         <Menubar 
             start={start} 
