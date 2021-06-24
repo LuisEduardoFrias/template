@@ -1,15 +1,21 @@
-import React from 'react'
-
+import React, { useRef } from 'react'
+import logo from '../../../assests/img/logo.png'
 import { Menubar } from 'primereact/menubar';
 import { Button } from 'primereact/button';
+import { ContextMenu } from 'primereact/contextmenu';
 
 export default function HeaderComponent()
 {
+    const cm = useRef(null);
     const items = [
         {
-           label:'Luis Eduardo Frias',
+           label:'Log out',
            icon:'pi pi-fw pi-file',
-        }
+        },
+        {
+            label:'Configuración',
+            icon:'pi pi-fw pi-file',
+         }
      ];
      
     const UserStyle ={
@@ -19,6 +25,17 @@ export default function HeaderComponent()
 
     }
 
-    return ( <Menubar model={items} style={{ height: '50px', boxSizing: 'border-box'}} 
-    end={ <div style={UserStyle}> <Button icon="pi pi-user" className="p-button-rounded p-button-info" /> <label style={{marginLeft: '5px'}}>Luis Eduardo frias</label></div> }/> )
+    const start = <img src={logo} height="40" className="p-mr-2"></img >;
+    const end = <div style={UserStyle}> <Button icon="pi pi-user" className="p-button-rounded p-button-info" onClick={(e) => cm.current.show(e)} /> <label style={{marginLeft: '5px', color:'white'}}>Luis Eduardo frias</label></div>
+    return ( 
+        <>
+        <ContextMenu model={items} ref={cm}></ContextMenu>
+        
+        <Menubar 
+            start={start} 
+            end={end} 
+            style={{ height: '50px', boxSizing: 'border-box',  backgroundColor: '#0DA0C1'}}
+            />
+        </> 
+    )
 }

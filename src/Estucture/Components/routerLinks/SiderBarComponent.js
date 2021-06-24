@@ -7,123 +7,146 @@ export default function SiderBarComponent({ShowSubMenu})
 
     const items = [
         {
-           label:'File',
+           label:'Gestión',
            icon:'pi pi-fw pi-file',
            items:[
               {
-                 label:'New',
+                 label:'CRM',
                  icon:'pi pi-fw pi-plus',
                  items:[
                     {
-                       label:'Bookmark',
+                       label:'Clientes',
                        icon:'pi pi-fw pi-bookmark'
                     },
                     {
-                       label:'Video',
+                       label:'Prospectos',
                        icon:'pi pi-fw pi-video'
                     }
                  ]
               },
               {
-                 label:'Delete',
-                 icon:'pi pi-fw pi-trash'
-              },
-              {
-                 label:'Export',
-                 icon:'pi pi-fw pi-external-link'
-              }
+               label:'RRHH',
+               icon:'pi pi-fw pi-plus',
+               items:[
+                  {
+                     label:'Empleados',
+                     icon:'pi pi-fw pi-bookmark'
+                  },
+               ]
+            },
            ]
         },
         {
-           label:'Edit',
-           icon:'pi pi-fw pi-pencil',
-           items:[
-              {
-                 label:'Left',
-                 icon:'pi pi-fw pi-align-left'
-              },
-              {
-                 label:'Right',
-                 icon:'pi pi-fw pi-align-right'
-              },
-              {
-                 label:'Center',
-                 icon:'pi pi-fw pi-align-center'
-              },
-              {
-                 label:'Justify',
-                 icon:'pi pi-fw pi-align-justify'
-              },
-    
-           ]
-        },
-        {
-           label:'Users',
+           label:'Transacciones',
            icon:'pi pi-fw pi-user',
            items:[
               {
-                 label:'New',
-                 icon:'pi pi-fw pi-user-plus'
-              },
-              {
-                 label:'Delete',
-                 icon:'pi pi-fw pi-user-minus'
-              },
-              {
-                 label:'Search',
+                 label:'Sales',
                  icon:'pi pi-fw pi-users',
                  items:[
                     {
-                       label:'Filter',
+                       label:'Facturación',
                        icon:'pi pi-fw pi-filter',
-                       items:[
-                          {
-                             label:'Print',
-                             icon:'pi pi-fw pi-print'
-                          }
-                       ]
-                    },
-                    {
-                       icon:'pi pi-fw pi-bars',
-                       label:'List'
                     }
                  ]
               }
            ]
         },
         {
-           label:'Events',
+           label:'Reportes',
            icon:'pi pi-fw pi-calendar',
            items:[
               {
-                 label:'Edit',
+                 label:'CRM',
                  icon:'pi pi-fw pi-pencil',
                  items:[
                     {
-                       label:'Save',
+                       label:'visitas semanales a prospectos',
                        icon:'pi pi-fw pi-calendar-plus'
                     },
-                    {
-                       label:'Delete',
-                       icon:'pi pi-fw pi-calendar-minus'
-                    }
                  ]
               },
               {
-                 label:'Archieve',
-                 icon:'pi pi-fw pi-calendar-times',
-                 items:[
-                    {
-                       label:'Remove',
-                       icon:'pi pi-fw pi-calendar-minus'
-                    }
-                 ]
-              }
+               label:'RRHH',
+               icon:'pi pi-fw pi-pencil',
+               items:[
+                  {
+                     label:'tardanzas de empleados',
+                     icon:'pi pi-fw pi-calendar-plus'
+                  },
+               ]
+            }
            ]
-        }
+        },
+        {
+         label:'Herramientas',
+         icon:'pi pi-fw pi-calendar',
+         items:[
+            {
+               label:'CRM',
+               icon:'pi pi-fw pi-pencil',
+               items:[
+                  {
+                     label:'importar desde excel clientes',
+                     icon:'pi pi-fw pi-calendar-plus'
+                  },
+               ]
+            },
+            {
+             label:'RRHH',
+             icon:'pi pi-fw pi-pencil',
+             items:[
+                {
+                   label:'importar desde excel empleados',
+                   icon:'pi pi-fw pi-calendar-plus'
+                },
+             ]
+          }
+         ]
+      },
+      {
+         label:'Configuraciones',
+         icon:'pi pi-fw pi-calendar',
+         items:[
+            {
+               label:'Informacion de Empresa',
+               icon:'pi pi-fw pi-pencil',
+            },
+            {
+             label:'info generales',
+             icon:'pi pi-fw pi-pencil',
+          },
+          {
+            label:'sucusales',
+            icon:'pi pi-fw pi-pencil',
+         },
+         {
+          label:'agencias',
+          icon:'pi pi-fw pi-pencil',
+         },
+         {
+            label:'Usuarios y Roles',
+            icon:'pi pi-fw pi-pencil',
+            items: [
+               {
+                  label:'usuarios',
+                  icon:'pi pi-fw pi-pencil',
+               },
+               {
+                  label:'roles',
+                  icon:'pi pi-fw pi-pencil',
+               },
+               {
+                  label:'permisos',
+                  icon:'pi pi-fw pi-pencil',
+               }
+            ]
+           }
+         ]
+      }
     ];
 
-    return ( <PanelMenu model={items} /> )
+    return ( <PanelMenu model={items} style={{backgroundColor: '#F5F5F5'}} /> )
 }
 
 
