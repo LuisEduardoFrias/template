@@ -1,11 +1,13 @@
 import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import SiderBarComponent from "../routerLinks/SiderBarComponent.js";
+import HeaderComponent from "../header/HeaderComponent.js";
 
-import RouterLinksComponent from "../RouterLinks/RouterLinksComponent.js";
-import HeaderComponent from "../Header/HeaderComponent.js";
+import HomePage from '../../Pages/HomePage.js';
+import NotFoundPage from '../../Pages/NotFoundPage.js';
 
-export default function RouterComponent(  )
+export default function StructureComponent(  )
 {
 
     const heightHeader = '50px';
@@ -52,7 +54,6 @@ export default function RouterComponent(  )
 
     return (
         <BrowserRouter>
-
             <div style={{height: '100%', }}>
 
                 <div style={header}>
@@ -62,25 +63,22 @@ export default function RouterComponent(  )
                 <div style={container} >
 
                     <div style={sider} >
-                        <RouterLinksComponent />
+                        <SiderBarComponent />
                     </div>
                     
                     <div style={home} >
-
                         <Switch>
-                            
-                            <Route exact path='/'>
-                                <h1>HOla</h1>
-                            </Route>
+            
+                            <Route exact path='/' component={HomePage} />
+
+                            <Route path='**' component={NotFoundPage} />
 
                         </Switch>
-
                     </div>
                 
                 </div>
 
             </div>
-
         </BrowserRouter>
     )
 }

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { PanelMenu } from 'primereact/panelmenu';
 
-export default function RouterLinksComponent({ShowSubMenu})
+export default function SiderBarComponent({ShowSubMenu})
 {
 
     const items = [

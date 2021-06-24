@@ -1,4 +1,4 @@
-import RouterComponent from '../Router/RouterComponent.js';
+import StructureComponent from '../structure/StructureComponent.js';
 
 export default function App() 
 {
@@ -12,7 +12,7 @@ export default function App()
  
    return (
      <div style={styles}> 
-        <RouterComponent />
+        <StructureComponent />
      </div>
    );
 }
