@@ -34,9 +34,9 @@ export default function HeaderComponent()
 
     const start = <img src={logo} alt='Logo eps.' height="40" className="p-mr-2"/>;
 
-    const end = <div style={UserStyle}> 
-                    <Button icon="pi pi-user" className="p-button-rounded p-button-info" onClick={(e) => cm.current.show(e)} />
-                    <label style={{marginLeft: '5px', color:'white'}}>{user.name}</label>
+    const end = <div style={UserStyle} onClick={(e) => cm.current.show(e)}> 
+                    <Button icon="pi pi-user" className="p-button-rounded p-button-info"  />
+                    <label style={{marginLeft: '5px', color:'white', cursor:'pointer'}}>{user.name}</label>
                 </div>
     
     return ( 
