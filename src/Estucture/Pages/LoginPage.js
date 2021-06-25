@@ -18,7 +18,7 @@ export default function LoginPage({ history })
 
     const handleLogin = () => {
 
-        const lastPath = localStorage.getItem('lastPath') || '/';
+        const lastPath = localStorage.getItem('lastPath') || '/home';
 
         dispatch({
             type: types.login,
@@ -37,7 +37,7 @@ export default function LoginPage({ history })
 
                 <img src={EpsLogo} alt='Logo de eps.' style={{position: 'relative', top:'7%', zIndex:'9', width:'300px', height:'120px'}} />
 
-                <div className="p-col-6 p-shadow-20" style={{position:'relative', backgroundColor: 'rgba(245, 244, 244, 0.6)', height: '50%', width: "40%", border: '2px solid lightgray',
+                <div className="p-col-6 p-shadow-20" style={{position:'relative', backgroundColor: 'rgb(242, 242, 242)', height: '50%', width: "40%", border: '2px solid lightgray',
                  boxSizing: 'border-box', borderRadius: '15px 15px'}}>
                 
                     <div style={{display:'flex', alignItems:'center', justifyContent:'center', height: '100%'}}>
@@ -61,8 +61,7 @@ export default function LoginPage({ history })
                             <div className="p-col">
                             
                                 <span  className="p-float-label">
-                                    <Password /* value={this.state.value1} onChange={(e) => this.setState({ value1: e.target.value })} */
-                                    inputStyle={{ width:'300px'}} feedback={false} />
+                                    <Password inputStyle={{ width:'300px'}} feedback={false} />
 
                                     <label>Contraseña</label>
                                 </span>

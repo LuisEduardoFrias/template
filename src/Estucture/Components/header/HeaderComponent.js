@@ -7,17 +7,32 @@ import { Button } from 'primereact/button';
 import { ContextMenu } from 'primereact/contextmenu';
 
 import { AuthContext } from '../../../auth/AuthContext';
+import { types } from '../../../types/types.js';
 
 export default function HeaderComponent()
 {
-    const { user } = useContext( AuthContext );
+    const { user, dispatch } = useContext( AuthContext );
 
     const cm = useRef(null);
+
+    const handleLogin = () => 
+    {
+        localStorage.setItem('user', JSON.stringify({"name":"Luis Eduardo Frias","logged":false}));
+
+        dispatch({
+            type: types.logout,
+            payload: {
+                name: 'Luis Eduardo Frias',
+                logged:false
+            }
+        });
+    }
 
     const items = [
         {
            label:'Log out',
            icon:'pi pi-fw pi-file',
+           command:handleLogin
         },
         {
             label:'Configuración',

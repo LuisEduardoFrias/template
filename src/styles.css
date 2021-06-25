@@ -1,4 +1,5 @@
 *{
     transform: translateY(-50%);
     background-color: rgba(245, 244, 244, 0.698);
+    overflow-y: auto;
 }

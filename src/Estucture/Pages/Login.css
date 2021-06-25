@@ -1,5 +1,5 @@
 .backgroundImage:before{
-    filter: blur(2px);
+/*     filter: blur(2px);
     content: '';
     position: absolute;
     top: 0px;
@@ -10,5 +10,6 @@
     background-size: cover;
     z-index: -1;
     -webkit-transform: scale(5);
-    -webkit-transform-origin: top left;
+    -webkit-transform-origin: top left; */
+    background-color: rgb(242, 242, 242);
 }
