@@ -25,10 +25,10 @@ export default function HeaderComponent()
          }
      ];
      
-    const UserStyle ={
+    const UserStyle = {
         display: 'flex',
         flexDirecction: 'row',
-        alignItems: 'center',
+        alignItems: 'center'
 
     }
 
@@ -41,7 +41,7 @@ export default function HeaderComponent()
     
     return ( 
         <>
-        <ContextMenu model={items} ref={cm}></ContextMenu>
+        <ContextMenu model={items} ref={cm} ></ContextMenu>
         
         <Menubar 
             start={start} 
