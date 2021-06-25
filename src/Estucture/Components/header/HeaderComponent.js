@@ -1,12 +1,19 @@
-import React, { useRef } from 'react'
+import React, { useContext, useRef } from 'react'
+
 import logo from '../../../assests/img/logo.png'
+
 import { Menubar } from 'primereact/menubar';
 import { Button } from 'primereact/button';
 import { ContextMenu } from 'primereact/contextmenu';
 
+import { AuthContext } from '../../../auth/AuthContext';
+
 export default function HeaderComponent()
 {
+    const { user } = useContext( AuthContext );
+
     const cm = useRef(null);
+
     const items = [
         {
            label:'Log out',
@@ -25,8 +32,13 @@ export default function HeaderComponent()
 
     }
 
-    const start = <img src={logo} height="40" className="p-mr-2"></img >;
-    const end = <div style={UserStyle}> <Button icon="pi pi-user" className="p-button-rounded p-button-info" onClick={(e) => cm.current.show(e)} /> <label style={{marginLeft: '5px', color:'white'}}>Luis Eduardo frias</label></div>
+    const start = <img src={logo} alt='Logo eps.' height="40" className="p-mr-2"/>;
+
+    const end = <div style={UserStyle}> 
+                    <Button icon="pi pi-user" className="p-button-rounded p-button-info" onClick={(e) => cm.current.show(e)} />
+                    <label style={{marginLeft: '5px', color:'white'}}>{user.name}</label>
+                </div>
+    
     return ( 
         <>
         <ContextMenu model={items} ref={cm}></ContextMenu>

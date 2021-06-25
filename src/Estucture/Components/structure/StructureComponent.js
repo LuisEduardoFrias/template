@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 import SiderBarComponent from "../routerLinks/SiderBarComponent.js";
 import HeaderComponent from "../header/HeaderComponent.js";
@@ -49,37 +49,36 @@ export default function StructureComponent(  )
         width: `Calc(100%)`,
         height: 'Calc(100%)',
         overflow: 'hidden',
+        position: 'relative',
         
     }
 
     return (
-        <BrowserRouter>
-            <div style={{height: '100%', }}>
+        <div style={{height: '100%', }}>
 
-                <div style={header}>
-                   <HeaderComponent />
-                </div>
-
-                <div style={container} >
-
-                    <div style={sider} >
-                        <SiderBarComponent />
-                    </div>
-                    
-                    <div style={home} >
-                        <Switch>
-            
-                            <Route exact path='/' component={HomePage} />
-
-                            <Route path='**' component={NotFoundPage} />
-
-                        </Switch>
-                    </div>
-                
-                </div>
-
+            <div style={header}>
+               <HeaderComponent />
             </div>
-        </BrowserRouter>
+
+            <div style={container} >
+
+                <div style={sider} >
+                    <SiderBarComponent />
+                </div>
+                
+                <div style={home} >
+                    <Switch>
+        
+                        <Route exact path='/home' component={HomePage} />
+
+                        <Route path='**' component={NotFoundPage} /> 
+
+                    </Switch>
+                </div>
+            
+            </div>
+
+        </div>
     )
 }
 

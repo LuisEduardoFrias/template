@@ -1,0 +1,14 @@
+.backgroundImageNotFound{
+    filter: blur(0.5px);
+    content: '';
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height:  100px; 
+    width: 100px;
+    background-image: url('../../assests/img/Paquetes.jpg');
+    background-size: cover;
+    z-index: -1;
+    -webkit-transform: scale(1);
+    -webkit-transform-origin: top left;
+}

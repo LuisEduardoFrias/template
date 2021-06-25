@@ -1,5 +1,5 @@
 import React from 'react'
-import backgroud from './background.png';
+import backgroud from '../../assests/img/background.png';
 
 export default function HomePage()
 {
