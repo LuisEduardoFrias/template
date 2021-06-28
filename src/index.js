@@ -6,7 +6,4 @@ import AppComponent from './Estucture/Components/app/AppComponent.js';
 import './index.css';
 import 'primeflex/primeflex.css';
 
-ReactDOM.render(
-  <AppComponent />,
-  document.getElementById('root')
-);
+ReactDOM.render( <AppComponent /> , document.getElementById('root') );

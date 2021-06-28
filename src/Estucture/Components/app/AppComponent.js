@@ -9,6 +9,7 @@ const init = () => {
 
 export default function App() 
 {
+
    const styles =  
    {
       width: 'Calc(100vw)',

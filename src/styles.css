@@ -2,4 +2,13 @@
     transform: translateY(-50%);
     background-color: rgba(245, 244, 244, 0.698);
     overflow-y: auto;
+    box-shadow: 5px 5px 5px rgba(63, 63, 63, 0.685);
+    font-family:Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color:brown;
+    width:300px;
+    height: 300px;
+    bottom: 0px;
+    text-decoration:none;
 }

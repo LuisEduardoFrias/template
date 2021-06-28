@@ -1,0 +1,27 @@
+.backgroundImage:before{
+/*     filter: blur(2px);
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 20%; 
+    width: 20%;
+    background-image: url('../../../assests/img/backgroundLogin.png');
+    background-size: cover;
+    z-index: -1;
+    -webkit-transform: scale(5);
+    -webkit-transform-origin: top left; */
+    background-color: rgba(236, 242, 242);
+    font-family:'Times New Roman', Times, serif
+    /* 'Courier New', Courier, monospace; */
+}
+
+#cursorDown{
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+}
+
+#cursorDown:hover{
+    cursor: pointer;    
+    background-color: rgb(236, 242, 242);
+}
