@@ -7,6 +7,7 @@ import HeaderComponent from "../header/HeaderComponent.js";
 import HomePage from '../../Pages/HomePage.js';
 import ProfileShowPage from '../../../Areas/Configuraciones/Pages/ProfileShowPage.js'
 import ProfileEditPage from '../../../Areas/Configuraciones/Pages/ProfileEditPage.js'
+import CrudExample from '../../../Areas/Gestion/Components/crudExample'
 import NotFoundPage from '../../Pages/NotFoundPage.js';
 
 export default function StructureComponent(  )
@@ -53,7 +54,7 @@ export default function StructureComponent(  )
         padding: '3px',
         width: `Calc(100%)`,
         height: 'Calc(100%)',
-        overflow: 'hidden',
+         overflow: 'auto',
         position: 'relative',
         border: '1px solid lightgray',
         
@@ -83,6 +84,8 @@ export default function StructureComponent(  )
 
                         <Route exact path='/profile/edit' component={ProfileEditPage} />
 
+                        <Route exact path='/crud' component={CrudExample} />
+                        
                         <Route path='**' component={NotFoundPage} /> 
 
                     </Switch>
